@@ -1,0 +1,58 @@
+//main: ../style.less
+.section-hero-image {
+    &{
+        padding: 0;
+    }
+    ul{
+        padding-left: 0;
+        margin: 0;
+    }
+    .wrapper-inner{
+                @media @mobile {
+                    padding: @base*7.5 0;
+                }
+                .slider-hero-image {
+                    padding: 0;
+                    margin: 0;
+                    list-style-type: none;
+                    }
+                }
+                .text {
+                    width: 60%;
+                    margin: 0 auto;
+                    font-family: @rob;
+                    letter-spacing: 0.03em;
+                    line-height: 2;
+                    font-family: @quick;
+                    @media @tablet {
+                        font-size: @fs-st - 1;
+                        line-height: 1.7;
+                        width: 80%;
+                    }
+                }
+    }
+
+.swiper-container{
+    height: @base*165;
+    text-align: center;
+    background: linear-gradient(#fbf4ff, #f1f5ff);
+    @media @tablet {
+        height: @base * 115;
+        
+    }
+
+    .slider-hero-image__item{
+        background: url(../../img/hero%20image.png) no-repeat 50% 110% / cover;
+        @media @tablet {
+        background-size: contain;
+        background-position: 50% 90%;
+        padding-top: 0;
+        }
+    }
+
+    @media @mobile {
+    height: @base* 90;
+    }
+
+}
+

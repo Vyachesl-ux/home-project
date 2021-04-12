@@ -1,0 +1,60 @@
+//main: ../style.less
+
+    .section-stats{
+        padding: 0;
+    background: linear-gradient(101.48deg, #E9EFFF 41.56%, #E0E9FF 81.53%);
+    display: flex;
+            @media @mobile {
+            flex-direction: column;
+        }
+    &__left, &__right{
+        display: flex;
+        flex-direction: column;
+        background: @secondary;
+        flex-basis: 50%;
+        text-align: right;
+        color: @white;
+        padding: 70px 100px;
+        font-size: 18px;
+        font-weight: 500;
+        @media @mobile {
+            text-align: center;
+        }
+        &-icon{
+            margin-bottom: 24px;
+        }
+        &-title{
+            color: @white;
+            font-weight: 400;
+            font-size: @fs-l;
+            margin-bottom: @base*8;
+        }
+        &-text{
+            width: 40%;
+            @media @tablet {
+                width: 100%;
+                font-size: @fs-st - 1;
+            }
+        }
+
+    }
+    &__left{
+        align-items: flex-end;
+        @media @mobile {
+            align-items: center;
+        }
+    }
+    &__right{
+        text-align: left;
+        color: @secondary;
+        background: none;
+        @media @mobile {
+            text-align: center;
+        }
+        &-title{
+            color: @secondary;
+        }
+    }
+}
+
+

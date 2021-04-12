@@ -1,0 +1,22 @@
+//main: ../style.less
+
+.dots{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	bottom: @base * 5;
+	&-item{
+		width: @base*2;
+		height: @base*2;
+		cursor: pointer;
+		background: @gray;
+		border-radius: 50%;
+		&+&{
+			margin-left: @base*2.5;
+		}
+		transition: .2s;
+	}
+	&-item__active{
+		background: @secondary;
+	}
+}

@@ -1,0 +1,106 @@
+//compress: true
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&family=Roboto:wght@100;400;500;700&display=swap');
+body {
+	padding-top: @base * 25;
+    font-family: @quick;
+    color: @default;
+}
+/*.no-scroll{
+	overflow: hidden;
+}*/
+.wrapper-outer {
+    border-bottom: 1px solid @devider;
+    padding: 0 @base*2.5;
+}
+
+.wrapper-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: @padding-vertical 0;
+    @media @tablet {
+    	padding: @padding-vertical - 20 0;
+    }
+    @media @mobile {
+    	padding: @padding-vertical - 50 0;
+    }
+    &--wide {
+        max-width: 1200px;
+    }
+}
+
+ul>li {
+    list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+    color: @select;
+}
+
+h1,
+h2 {
+    font-size: @fs-xs;
+    margin-bottom: @base*4;
+    text-transform: uppercase;
+    font-family: @rob;
+
+}
+h3{font-size: 36px; font-weight: 300;
+	@media @tablet {
+		font-size: @fs-ml;
+		font-weight: 400;
+	}
+}
+h4{font-size: 24px;}
+h5{
+    font-size: @fs-l;
+    margin-bottom: @base*7;
+    font-weight: 300;
+}
+span {
+        font-weight: 500;
+}
+.subtitle{
+	font-size: @fs-l;
+	margin-bottom: @base*7;
+	font-weight: 300;
+	color: @select;
+	@media @tablet {
+		font-size: @fs-m;
+		margin-bottom: @base *3;
+	}
+}
+.subtitle-sm{
+	font-size: @fs-m;
+	color: @select;
+}
+
+
+// blocks
+@import "../css/blocks/section-header";
+@import "../css/blocks/section hero image";
+@import "../css/blocks/section customers";
+@import "../css/blocks/section plan and manage";
+@import "../css/blocks/section features";
+@import "../css/blocks/section stats";
+@import "../css/blocks/section blog";
+@import "../css/blocks/section quotes";
+@import "../css/blocks/section faq";
+@import "../css/blocks/section get started";
+@import "../css/blocks/section newsletter";
+@import "../css/blocks/section footer";
+@import "../css/blocks/button";
+@import "../css/blocks/helpers";
+@import "../css/blocks/dots";
+@import "../css/blocks/var";
+@import "../css/blocks/burger";
+@import "../css/blocks/swiper";

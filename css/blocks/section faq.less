@@ -1,0 +1,87 @@
+//main: ../style.less
+.section-faq{
+    background-color: @white;
+    .faq-accordion{
+    	max-width: 743px;
+    	margin: @base*17 auto 0;
+    	&__item{
+    		position: relative;
+    		border-bottom: 1px solid @gray;
+    		transition: .2s;
+    		cursor: pointer;
+    		&--title{
+    			padding: @base*5 @base*15;
+    			font-weight: 500;
+    			letter-spacing: 3%;
+    			line-height: 2;
+                @media @mobile {
+                    font-size: @fs-st - 1;
+                padding: @base*2.5 @base*15;
+
+                }
+    		}
+    		.accordion-arrow{
+    			position: absolute;
+    			content: '';
+    			width: 11px;
+    			height: 11px;
+    			border-bottom: 3px solid @primary;
+    			border-left: 3px solid @primary;
+    			border-right: transparent;
+    			border-top: transparent;
+    			top: @base * 7.5;
+    			left: 24px;
+    			transform: rotate(-50grad);
+                @media @mobile {
+                top: @base * 4;
+                    
+                }
+    		}
+    	}
+    	&__subitem{
+    			display: none;
+    			justify-content: space-around;
+    			margin-bottom: @base*10;
+    			transition: .2s;
+    			&--text{
+    				flex-basis: 50%;
+    				margin-left: @base*20;
+    				line-height: 2;
+    				font-size: 14px;
+                    @media @mobile {
+                        flex-basis: 100%;
+                        font-size: @fs-st - 2;
+                        margin-bottom: @base * 2.5;
+                    }
+
+    			}
+                .btn-wrapper{
+                        @media @mobile {
+                            margin-left: 0;
+                        }
+                    }
+    		}
+    	.active{
+    		.accordion-arrow{
+    			top: @base * 7.5;
+    			transform: rotate(-250grad);
+				border-bottom: 3px solid @select;
+    			border-left: 3px solid @select;
+                @media @mobile {
+                    top: @base * 4;
+                }
+    		}
+    		.faq-accordion__item--title{
+    			font-weight: 700;
+    			color: @select;
+
+    		}
+    		.faq-accordion__subitem{
+    			display: flex;
+                @media @mobile {
+                    flex-wrap: wrap;
+                }
+    		}
+    	}
+    }
+}

@@ -1,0 +1,28 @@
+//main: ../style.less
+.section-get-started{
+    background:  url(../../img/getStarted_bg.png) no-repeat center / contain , linear-gradient(229.32deg, #6888FF 12.77%, #5E80FF 73.11%);
+    .wrapper-inner{
+    	 h2, .subtitle{
+    		color: @white;
+    	}
+    }
+    .get-started__context{
+    	margin: 0 auto;
+    	color: @white;
+    	margin-bottom: @base*7;
+    	width: 80%;
+    	line-height: 2;
+        @media @mobile {
+            font-size: @fs-st - 1;
+        }
+    }
+    .btn-wrapper__group{
+    	.btn--transparent{
+    		&:hover{
+    		background-color: @white;
+    		color: @secondary;
+    	}
+    	}
+
+    }
+}

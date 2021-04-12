@@ -1,0 +1,82 @@
+//main: ../style.less
+.section-plan-and-manage{
+    background-color: #f5f8ff;
+    .wrapper-inner{
+    	display: flex;
+    	position: relative;
+        @media @mobile {
+            flex-wrap: wrap;
+            padding: @base * 25 0  @base*12.5 0;
+        }
+    	.customer-column__left{
+    		flex-basis: 45%;
+            @media @mobile {
+                flex-basis: 100%;
+            }
+    		.text{
+    			line-height: 2;
+    			letter-spacing: 3%;
+                font-size: @fs-st - 1;
+    		}
+    		.customer-btn__video{
+    			display: flex;
+                @media @mobile {
+                    justify-content: center;
+                }
+    		.btn-wrapper{
+    			margin: @base*12 0 0;
+                @media @tablet {
+                    margin:@base * 4 0 0;
+                }
+    			.btn--primary{
+    				position: relative;
+    				color: @white;
+    				background-color: @secondary;
+                    border: 1px solid @secondary;
+					    &:hover{
+    					background: darken(@secondary, 5%);
+    					color: @white;
+	    				}
+    				&:after{
+    					position: absolute;
+    					content: '';
+    					top: 50%;
+    					right: 10%;
+    					width: 0;height: 0;
+    					border-left: @base*2 solid @white;
+    					border-top: @base solid transparent;
+    					border-bottom: @base solid transparent;
+    					transform: translateY(-50%);
+	    				}
+	    			}
+	    		}
+    		}
+    	}
+    	.customer-column__right{
+    		flex-basis: 55%;
+            @media @mobile {
+                flex-basis: 100%;
+            }
+			.aside-image{
+				position: absolute;
+				top: 5%;
+				left: 30%;
+                width: 100%;
+                max-width: 854px;
+                @media @pc {
+                    top: 10%;
+                    width: 70%;
+                    left: 35%;
+                }
+                @media @lg {
+                    width: 60%;
+                    top: 20%;
+                    left: 40%;
+                }
+                @media @mobile {
+                    top: @base * 2.5;
+                }
+			}
+    	}
+    }
+}

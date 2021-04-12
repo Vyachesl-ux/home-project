@@ -1,0 +1,93 @@
+//main: ../style.less
+.section-newsletter{
+    background-color: #fcfdff;
+    .wrapper-inner{
+    	display: flex;
+    	justify-content: space-between;
+    	align-items: center;
+        @media @mobile {
+            flex-wrap: wrap;
+        }
+    	.section-newsletter__left{
+    		.section-newsletter__text{
+    			margin-top: @base*4.5;
+    			line-height: 2;
+    			font-size: 14px;
+    		}
+    		flex-basis: 35%;
+            @media @tablet {
+                flex-basis: 60%;
+            }
+            @media @mobile {
+                flex-basis: 100%;
+                margin-bottom: @base * 3;
+            }
+    	}
+    	.section-newsletter__right{
+            width: 100%;
+    		form{
+                text-align: center; 
+    			.email{
+    			height: 59px;
+    			width: 280px;
+    			border: 0;
+    			background-color: @light-gray;
+    			border-radius: @base;
+    			outline: none;
+    			padding-left: @base*6;
+    			&[placeholder]{font-size: 13px; color: @select; font-weight: 700;}
+					&::-webkit-placeholder {color:@select;}
+					&::-moz-placeholder          {color:@select;}
+					&:-moz-placeholder           {color:@select;}
+					&:-ms-placeholder      {color:@select;}
+                    @media @tablet {
+                        width: 250px;
+                    }
+                    @media @mobile {
+                        width: 55%;
+                        height: @base * 10;
+                    }
+    			}
+    			.form-button{
+    				border:0;
+    				margin-left: @base*3;
+    				background-color: @secondary;
+    				padding: @base*5 @base*15;
+    				border-radius: @base;
+    				color: @white;
+    				outline: none;
+                    @media @tablet {
+                        padding: @base*5 @base * 10;
+                    }
+                    @media @mobile {
+                        padding: @base * 3 @base * 7.5;
+                        font-size: @fs-st - 1;
+                    }
+                    @media @mobile-sm {
+                        padding: @base * 3 @base * 4;
+                        
+                    }
+    				&:hover{
+    					background-color: darken(@secondary, 5%);
+    				}
+    				&:active{
+    					background-color: @secondary;
+
+    				}
+    			}
+    		}
+
+    		}
+    	}
+    }
+
+.visually-hidden{
+        border: 0; 
+        clip: rect(0 0 0 0); 
+        height: 1px;  
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+}

@@ -1,0 +1,109 @@
+//main: ../style.less
+.section-features{
+	background: url(../../img/features_bg.png)no-repeat center / contain;
+	.wrapper-inner{
+
+		.features-content{
+			display: flex;
+			justify-content: space-between;
+			margin-top: @base*20;
+			@media @tablet {
+				margin-top: @base * 10;
+			}
+			@media @mobile {
+				flex-wrap: wrap;
+			}
+			&__item{
+				position: relative;
+				flex-basis: 15%;
+				text-align: center;
+				margin: @base*2.5;
+				@media @mobile {
+					flex-basis: 40%;
+				}
+					&:not(:last-child):after{
+						position: absolute;
+						content: '';
+						width: 28px;
+						height: 1px;
+						background: @gray;
+						top: 50%;
+						right: -50%;
+						@media @mobile {
+							display: none;
+						}
+					}
+				&-icon{
+					img{
+						margin: auto;
+						display: block;
+						width: 100%;
+						max-width: 69px;
+					}
+				}
+
+						&-title{
+							margin: @base*8 0 @base*6;
+							font-size: @fs-st - 1;
+							font-weight: 700;
+							color: @secondary;
+							@media @mobile-sm {
+								font-size: @fs-sm;
+							}
+						}
+							&-text{
+								font-size: @fs-sm;
+								line-height: 2;
+							}
+			}		
+		}	
+		.features-btn__wrapper{
+			margin-top: @base*25;
+			display: flex;
+			justify-content: center;
+			@media @tablet {
+				margin-top: @base * 12.5;
+			}
+			.btn-wrapper:first-child>.btn--primary{
+				position: relative;
+				background-color: @pink;
+				color: @red;
+				border: 1px solid @pink;
+				&:after, &:before{
+					position: absolute;
+					content: '';
+					width: 15px;
+					height: 1px;
+					background: @gray;
+					top: 50%;
+					right: -@base*7.5;
+					z-index: 150;
+				}
+				&:before{
+					right: -@base*21;
+				}
+					&:hover{
+						background-color: darken(@pink, 5%);
+					}
+			}
+			.btn-wrapper{
+				margin: 0;
+			}
+			.btn-wrapper + .btn-wrapper{
+				margin-left: @base*25;
+			}
+			.btn-wrapper:last-child{
+				position: relative;
+				&:after{
+					position: absolute;
+					content: 'OR';
+					top: 50%;
+					transform: translateY(-50%);
+					left: -@base*15;
+					font-weight: 500;
+					font-size: 11px;
+				}
+			}
+		}
+	}
+}

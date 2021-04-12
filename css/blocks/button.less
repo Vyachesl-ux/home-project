@@ -1,0 +1,79 @@
+//main: ../style.less
+.btn-wrapper {
+    margin-left: @base*11;
+    border-radius: @base/2;
+    .btn {
+        display: block;
+        text-decoration: none;
+        font-family: @quick;
+        font-size: @fs-sm;
+        font-weight: 700;
+        padding: @base*3 @base*4;
+        transition: .2s;
+        
+
+        &--primary {
+            background-color: #D2E1FF;
+            color: #3A79FF;
+            width: @base*18;
+            cursor: pointer;
+            border: 1px solid #D2E1FF;
+            &:hover {
+                background-color: darken(#D2E1FF, 5%);
+            }
+        }
+        &--transparent{
+             color: @primary;
+             background-color: none;
+             border: 1px solid @gray;
+             &:hover{
+                background-color: darken(#fff, 5%);
+             }
+        }
+    }
+    &__group{
+        display: flex;
+        justify-content: center;
+            .btn--primary{
+                background-color: #fff;
+            }
+            .btn--transparent{
+                color: #fff;
+                border: 1px solid #fff;
+            }
+            @media @mobile {
+                margin-left: 0;
+            }
+    }
+}
+
+.play-btn {
+    margin-top: @base*5;
+    position: relative;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background-color: @white;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    &:hover {
+        box-shadow: 0px 0px @base*5 0px #C9D1E799;
+    }
+    &:active {
+        box-shadow: none;
+    }
+    &:after {
+        position: absolute;
+        content: '';
+        height: 0;
+        width: 0;
+        top: 50%;
+        left: 45%;
+        transform: translateY(-50%);
+        border-left: 13px solid @secondary;
+        border-top: @base*2 solid transparent;
+        border-bottom: @base*2 solid transparent;
+        border-radius: @base;
+    }
+}

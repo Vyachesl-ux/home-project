@@ -1,0 +1,64 @@
+//main: ../style.less
+.section-quotes{
+    background: linear-gradient(180deg, #EAF0FF 0%, #F6F9FF 100%);
+	.wrapper-inner{
+			&__content{
+				display: flex;
+				justify-content: space-between;
+				@media @mobile {
+					flex-wrap: wrap;
+				}
+				.section-quotes__left, .section-quotes__right{
+				flex-basis: 40%; 
+				@media @mobile {
+					flex-basis: 100%;
+				}
+				}
+				.section-quotes__left{
+					margin-top: @base*9;
+					&--text{
+						margin-top: @base*3;
+						font-size: 12px;
+						font-weight: 500;
+						line-height: 2;
+					}
+				}
+				.section-quotes__right{
+					position: relative;
+					flex-basis: 47%;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					padding-bottom: 70px;
+					@media @mobile {
+						flex-basis: 100%;
+						margin-top: @base * 2.5;
+					}
+					.slider-quotes__item{
+						position: relative;
+						font-size: 14px;
+						line-height: 2;
+						letter-spacing: 3%;
+						background: @white;
+						padding: @base*10 @base*17;
+						border: 1px solid @devider;
+						box-sizing: border-box;
+						@media @mobile {
+							padding: @base*10 @base*2.5;
+						}
+						img{
+							position: absolute;
+							bottom: -35px;
+							width: 69px;
+							height: 69px;
+							border-radius: 50%;
+							left: 50%;
+							transform: translateX(-50%);
+						}
+					}
+
+				}
+			}
+	}
+}

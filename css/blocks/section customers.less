@@ -1,0 +1,28 @@
+//main: ../style.less
+.section-customers{
+    .wrapper-inner{
+        padding: @padding-vertical-sm 0;
+        .customer-content__wrapp{
+        	display: flex;
+        	justify-content: space-between;
+        	align-items: center;
+            @media @mobile {
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+
+            }
+        	a{
+        		transition: .2s;
+        		opacity: .4;
+                @media @mobile {
+                    margin-bottom: @base * 5;
+                    flex-basis: 45%;
+                    text-align: center; 
+                }
+        		&:hover{
+        			opacity: 1;
+        		}
+        	}
+        }
+    }
+}
